@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Rickey's -- Notes -- GIT</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-loading">
+
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <a href="notes.html" class="logo">Notes</a>
+            </header>
+
+            <!-- Nav -->
+<!--            <nav id="nav">-->
+<!--                <ul class="links">-->
+<!--                    <li><a href="index.html">Home</a></li>-->
+<!--                    <li class="active"><a href="notes.html">notes</a></li>-->
+<!--                    <li><a href="projects.html">projects</a></li>-->
+<!--                </ul>-->
+<!--                &lt;!&ndash;						<ul class="icons">&ndash;&gt;-->
+<!--                &lt;!&ndash;							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>&ndash;&gt;-->
+<!--                &lt;!&ndash;							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>&ndash;&gt;-->
+<!--                &lt;!&ndash;							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>&ndash;&gt;-->
+<!--                &lt;!&ndash;							<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>&ndash;&gt;-->
+<!--                &lt;!&ndash;						</ul>&ndash;&gt;-->
+<!--            </nav>-->
+
+            <!-- Main -->
+            <div id="main">
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <span class="date">April 25, 2017</span>
+                        <h1>HOW TO USE<br />
+                            GIT</h1>
+                        <p>This page shows some basic usages of GIT. </br>
+                            Basically, including common command lines and functionality of each of them</p>
+                    </header>
+                    <div class="image main"><img src="images/git.jpg" alt="" /></div>
+                    <h3>Git: git diff </h3>
+                    <h5>比较当前工作目录及暂存区的区别,可以指定分支及文件.
+                        如果还未add进暂存区,则比较文件自身修改前后的区别</h5>
+                    <pre>
+                        $ git diff
+                        $ git diff 'filename'
+                        $ git diff 'branch' 'filename'</pre>
+
+                    <h5>比较远程仓库两次commit的差异</h5>
+                    <pre>
+                        $ git diff 'commit' 'filename'
+                        $ git diff 'commit' 'commit'</pre>
+
+                    <h3>Git: git branch</h3>
+                    <pre>
+                        $ git branch                //查看当前分支
+                        $ git branch -r             //查看远程仓库当前分支
+                        $ git branch -d 'branch'    //删除指定本地分支
+                        $ git branch -r -d 'branch' //删除指定远程仓库分支
+
+                        $ git checkout 'brunch'     //切换分支
+                        $ git checkout -b 'brunch'  //创建并切换分支
+
+                        $ git merge 'brunch'        //合并分支
+                    </pre>
+
+                    <h3>Git: 上传常用操作</h3>
+                    <h5>本地仓库暂存后提交到远程仓库流程</h5>
+                    <pre>
+                        // 本地仓库操作
+                        $ git init                              //初始化一个新仓库
+                        $ git add                               //添加文件到暂存区
+                        $ git commit -m "commit instruction"    //提交更新
+
+                        // 远程仓库操作
+                        $ git remote add 'shortname' 'url'      //添加远程仓库
+                        $ git push 'shortname' 'brunch'         // 上传至远程仓库
+
+                    </pre>
+
+                    <h3>Git: 拉取远程仓库文件</h3>
+                    <h5>git pull vs git fetch</h5>
+                    <p>
+                        git fetch：相当于是从远程获取最新版本到本地，不会自动merge <br/>
+                        git pull：相当于是从远程获取最新版本并merge到本地 <br/>
+                        在实际使用中，git fetch更安全一些,因为在merge前，我们可以查看更新情况，然后再决定是否合并
+                    </p>
+
+
+                </section>
+
+            </div>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul><li>&copy; Rickey</li><li>Design: rickeylee09.github.io</li></ul>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
+
+
