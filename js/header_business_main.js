@@ -18,7 +18,7 @@ document.writeln("                    <li class=\'nav-item\'><a href=\'health.ht
 document.writeln("                    </li>");
 document.writeln("                    <li class=\'nav-item\'><a href=\'health.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 \'>娱乐</a>");
 document.writeln("                    </li>");
-document.writeln("                    <li class=\'nav-item\'><a href=\'health.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 \'>其他</a>");
+document.writeln("                    <li class=\'nav-item\'><a href=\'else.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 \'>其他</a>");
 document.writeln("                    </li>");
 document.writeln("                </ul>");
 document.writeln("            </div>");
