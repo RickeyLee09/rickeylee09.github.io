@@ -6,7 +6,7 @@ document.writeln("            <div id=\'navbarSupportedContent\' class=\'collaps
 document.writeln("                <ul class=\'navbar-nav ml-auto d-lg-flex align-items-lg-center\'>");
 document.writeln("                    <li class=\'nav-item\'><a href=\'../index.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4\'>首页 </a>");
 document.writeln("                    </li>");
-document.writeln("                    <li class=\'nav-item\'><a href=\'../business.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4\'>财经 </a>");
+document.writeln("                    <li class=\'nav-item\'><a href=\'../business.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4\'>经济 </a>");
 document.writeln("                    </li>");
 document.writeln("                    <li class=\'nav-item\'><a href=\'../health.html\' class=\'nav-link font-weight-bold text-uppercase px-lg-3 py-lg-4 active\'>健康</a>");
 document.writeln("                    </li>");
