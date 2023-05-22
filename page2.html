@@ -23,8 +23,9 @@
         <h1 id="medicineStatus"></h1>
     </div>
 
-    <div class="full-width">
-        <button id="nextButton" style="font-size: 24px; padding: 10px 20px;">Next</button>
+    <div id="buttonContainer" class="full-width">
+        <button id="yesButton" style="font-size: 24px; padding: 10px 20px;">Yes</button>
+        <button id="noButton" style="font-size: 24px; padding: 10px 20px;">No</button>
     </div>
 
     <h2 id="paramValue"></h2>
@@ -44,17 +45,18 @@
         // Set the text of the 'paramValue' element to the parameter value
         document.getElementById('paramValue').textContent = `${paramValue} / 40`;
 
-        let randomNumber = Math.random();
+        // Generate a random number
+        document.getElementById("medicineStatus").innerHTML = "Do you think that the patient will overcome the crisis?";
 
-        if (randomNumber > 0.5) {
-            document.getElementById("medicineStatus").innerHTML = "The patient has taken the medicine";
-        } else {
-            document.getElementById("medicineStatus").innerHTML = "The patient has not taken the medicine";
-        }
 
-        document.getElementById("nextButton").addEventListener("click", function() {
-            window.location.href = 'page2.html?param=' + paramValue;
+        document.getElementById("yesButton").addEventListener("click", function() {
+            window.location.href = 'page3.html?param=' + paramValue;
         });
+
+        document.getElementById("noButton").addEventListener("click", function() {
+            window.location.href = 'page3.html?param=' + paramValue;
+        });
+
     </script>
 
 </body>
