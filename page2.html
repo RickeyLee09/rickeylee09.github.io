@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Check</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .full-width {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-width">
+        <h1 id="medicineStatus"></h1>
+    </div>
+
+    <div id="buttonContainer" class="full-width">
+        <button id="yesButton" style="font-size: 24px; padding: 10px 20px;">Yes</button>
+        <button id="noButton" style="font-size: 24px; padding: 10px 20px;">No</button>
+    </div>
+
+    <h2 id="paramValue"></h2>
+
+    <script>
+        // Get the query string from the URL
+        const queryString = window.location.search;
+        // Create a URLSearchParams object from the query string
+        const urlParams = new URLSearchParams(queryString);
+        // Get the value of the 'param' parameter
+        let paramValue;
+        if (urlParams.get('param')) {
+            paramValue = urlParams.get('param');
+        } else {
+            paramValue = 0;
+        }
+        // Set the text of the 'paramValue' element to the parameter value
+        document.getElementById('paramValue').textContent = `${paramValue} / 40`;
+
+        // Generate a random number
+        document.getElementById("medicineStatus").innerHTML = "Do you think that the patient will overcome the crisis?";
+
+
+        document.getElementById("yesButton").addEventListener("click", function() {
+            window.location.href = 'page3.html?param=' + paramValue;
+        });
+
+        document.getElementById("noButton").addEventListener("click", function() {
+            window.location.href = 'page3.html?param=' + paramValue;
+        });
+
+    </script>
+
+</body>
+</html>
