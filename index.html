@@ -24,36 +24,20 @@
     </div>
 
     <div class="full-width">
-        <button id="nextButton" style="font-size: 24px; padding: 10px 20px;">Next</button>
+        <button id="cn" style="font-size: 24px; padding: 10px 30px;">中文</button>
+        <button id="en" style="font-size: 24px; padding: 10px 30px;">English</button>
     </div>
 
     <h2 id="paramValue"></h2>
 
     <script>
-        // Get the query string from the URL
-        const queryString = window.location.search;
-        // Create a URLSearchParams object from the query string
-        const urlParams = new URLSearchParams(queryString);
-        // Get the value of the 'param' parameter
-        let paramValue;
-        if (urlParams.get('param')) {
-            paramValue = urlParams.get('param');
-        } else {
-            paramValue = 0;
-        }
-        // Set the text of the 'paramValue' element to the parameter value
-        document.getElementById('paramValue').textContent = `${paramValue} / 40`;
+        document.getElementById("medicineStatus").innerHTML = "选择语言： Select Language: ";
 
-        let randomNumber = Math.random();
-
-        if (randomNumber > 0.5) {
-            document.getElementById("medicineStatus").innerHTML = "The patient has taken the medicine";
-        } else {
-            document.getElementById("medicineStatus").innerHTML = "The patient has not taken the medicine";
-        }
-
-        document.getElementById("nextButton").addEventListener("click", function() {
-            window.location.href = 'page2.html?param=' + paramValue;
+        document.getElementById("en").addEventListener("click", function() {
+            window.location.href = 'page1.html';
+        });
+        document.getElementById("cn").addEventListener("click", function() {
+            window.location.href = 'page1-cn.html';
         });
     </script>
 

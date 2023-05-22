@@ -43,25 +43,25 @@
         let recovery = Math.random();
         if(recovery > 0.25){
             setTimeout(function(){
-                document.getElementById("medicineStatus").innerHTML = "The patient overcome the crisis";
+                document.getElementById("medicineStatus").innerHTML = "患者康复了。";
                 setTimeout(function(){
                     paramValue = parseInt(paramValue) + 1;
                     if(parseInt(paramValue) >= 40){
-                        window.location.href = 'endPage.html'
+                        window.location.href = 'endPage-cn.html'
                     } else {
-                        window.location.href = 'page1.html?param=' + paramValue;
+                        window.location.href = 'page1-cn.html?param=' + paramValue;
                     }
                 }, 2000); // 2000 milliseconds = 2 seconds
             }, 2); // 2000 milliseconds = 2 seconds
         } else {
             setTimeout(function(){
-                document.getElementById("medicineStatus").innerHTML = "The patient didn't overcome the crisis";
+                document.getElementById("medicineStatus").innerHTML = "患者未康复。";
                 setTimeout(function(){
                     paramValue = parseInt(paramValue) + 1;
                     if(parseInt(paramValue) >= 40){
-                        window.location.href = 'endPage.html'
+                        window.location.href = 'endPage-cn.html'
                     } else {
-                        window.location.href = 'page1.html?param=' + paramValue;
+                        window.location.href = 'page1-cn.html?param=' + paramValue;
                     }
                 }, 2000); // 2000 milliseconds = 2 seconds
             }, 2); // 2000 milliseconds = 2 seconds

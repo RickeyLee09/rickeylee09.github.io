@@ -32,22 +32,21 @@
     </div>
 
     <div>
-        <button id="upload" style="font-size: 24px; padding: 10px 40px;">Upload Result</button>
+        <button id="upload" style="font-size: 24px; padding: 10px 40px;">确认提交</button>
     </div>
 
     <script>
-        document.getElementById("medicineStatus").innerHTML = 'To what extend do you think \
-            that this kind of medicine has been effective in healing the crises of the patients \
-            you have seen? 0("definitely NOT") to 100 ("definitely YES") ';
+        document.getElementById("medicineStatus").innerHTML = '你认为这种药多大程度上能有效治疗该种疾病？\
+                0(绝对无效)到 100(绝对有效)';
 
         const range = document.getElementById('range');
         function changeV() {
             let ratio = parseInt(range.value);
-            document.getElementById("resultRatio").innerHTML = "You selected: " + ratio + "%";
+            document.getElementById("resultRatio").innerHTML = "你的选择: " + ratio + "%";
         }
 
         document.getElementById("upload").addEventListener("click", function() {
-            window.location.href = 'thankyou.html';
+            window.location.href = 'thankyou-cn.html';
         });
     </script>
 
