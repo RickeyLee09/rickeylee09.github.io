@@ -4,35 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Check</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-width {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="full-width">
         <h1 id="medicineStatus"></h1>
     </div>
 
-    <div>
-        <input type="range" id="range" value="50" min="0" max="100" step="1" onchange="changeV()">
+    <div class="full-width">
+        <input type="range" id="range" value="50" min="0" max="100" step="1" oninput="changeV()">
     </div>
 
-    <div>
+    <div class="full-width">
         <h1 id="resultRatio"></h1>
     </div>
 
-    <div>
-        <button id="upload" style="font-size: 24px; padding: 10px 40px;">确认提交</button>
+    <div id="buttonContainer" class="full-width">
+        <button id="upload">确认提交</button>
     </div>
 
     <script>
@@ -40,6 +28,7 @@
                 0(绝对无效)到 100(绝对有效)';
 
         const range = document.getElementById('range');
+
         function changeV() {
             let ratio = parseInt(range.value);
             document.getElementById("resultRatio").innerHTML = "你的选择: " + ratio + "%";

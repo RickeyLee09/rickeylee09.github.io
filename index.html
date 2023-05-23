@@ -4,31 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Check</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-width {
-            width: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="full-width">
         <h1 id="medicineStatus"></h1>
     </div>
 
-    <div class="full-width">
-        <button id="cn" style="font-size: 24px; padding: 10px 30px;">中文</button>
-        <button id="en" style="font-size: 24px; padding: 10px 30px;">English</button>
+    <div id="buttonContainer" class="full-width">
+        <button id="cn">中文</button>
+        <button id="en">English</button>
     </div>
 
-    <h2 id="paramValue"></h2>
 
     <script>
         document.getElementById("medicineStatus").innerHTML = "选择语言： Select Language: ";

@@ -4,27 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicine Check</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-width {
-            width: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="full-width">
         <h1 id="medicineStatus"></h1>
     </div>
 
-    <div class="full-width">
-        <button id="nextButton" style="font-size: 24px; padding: 10px 20px;">Next</button>
+    <div id="buttonContainer" class="full-width">
+        <button id="nextButton">Next</button>
     </div>
 
     <h2 id="paramValue"></h2>
