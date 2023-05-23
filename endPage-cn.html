@@ -34,7 +34,18 @@
             document.getElementById("resultRatio").innerHTML = "你的选择: " + ratio + "%";
         }
 
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?YOUR_SITE_ID";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+
         document.getElementById("upload").addEventListener("click", function() {
+            var ratio = document.getElementById("range").value;
+            _hmt.push(['_trackEvent', 'button', 'click', '确认提交', ratio]);
             window.location.href = 'thankyou-cn.html';
         });
     </script>
