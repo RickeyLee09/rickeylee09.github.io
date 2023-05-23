@@ -35,34 +35,7 @@
         }
 
         document.getElementById("upload").addEventListener("click", function() {
-            // window.location.href = 'thankyou.html';
-
-            // store in database
-            let request = window.indexedDB.open('mydatabase', 1);
-            request.onerror = function(event) {
-                console.log('Database error: ' + event.target.errorCode);
-            };
-            request.onupgradeneeded = function(event) {
-                let db = event.target.result;
-                let objectStore = db.createObjectStore('ratios', { keyPath: 'id', autoIncrement: true });
-                objectStore.createIndex('ratio', 'ratio', { unique: false });
-            };
-            request.onsuccess = function(event) {
-                let db = event.target.result;
-                let transaction = db.transaction(['ratios'], 'readwrite');
-                let objectStore = transaction.objectStore('ratios');
-                let ratio = parseInt(range.value);
-                // objectStore.add({ ratio: ratio });
-                objectStore.add({ "ratio": 255 });
-
-                
-                transaction.oncomplete = function(event) {
-                console.log('Ratio added to database');
-                };
-                transaction.onerror = function(event) {
-                console.log('Transaction error: ' + event.target.errorCode);
-                };
-            };
+            window.location.href = 'thankyou.html';
         });
     </script>
 
