@@ -5,7 +5,17 @@
     height: 100vh;
     margin: 0;
   } */
-  
+body {
+    background-color: #F5DEB3; /* warm-toned background */
+    font-family: Arial, sans-serif; /* change font */
+    color: #333; /* change text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* set the height of the body to the viewport height */
+}
+
 .full-width {
     width: 100%;
     float: left;
@@ -27,17 +37,32 @@
     flex-direction: column;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px; /* add some margin around the buttons */
+  }
+
 button {
     font-size: 24px;
     padding: 10px 40px;
-    width: 50%;
+    width: 35%;
     float: left;
     display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    background-color: rgb(123, 134, 145);
-    color: rgb(255, 255, 255);
+    /* flex-direction: column; */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFA07A; /* warm-toned button background */
+    color: #fff; /* button text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* button reaction */
 }
+
+button:hover {
+    background-color: #FF8C69; /* button reaction */
+}
+
 
 input[type="range"] {
     width: 70%;

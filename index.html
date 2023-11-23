@@ -18,7 +18,57 @@
 
 
     <script>
-        document.getElementById("medicineStatus").innerHTML = "选择语言： Select Language: ";
+        function changeButtonColor(index, times) {
+            if (times > 0) {
+                var currentIndex = times % 2;
+                buttons[currentIndex ^ 1].style.backgroundColor = 'red';
+                buttons[currentIndex].style.backgroundColor = '#FFA07A';
+                setTimeout(function() {
+                    changeButtonColor(index, times - 1);
+                }, 100);
+            } else {
+                var currentIndex = index % 2;
+                buttons[currentIndex].style.backgroundColor = 'red';
+                buttons[currentIndex ^ 1].style.backgroundColor = '#FFA07A';        
+                blink(15);
+            }
+        }
+
+        function blink(times){
+            if(randomIndex % 2 == 0){
+                document.getElementById("medicineStatus").innerHTML = "中文哟";
+            } else {
+                document.getElementById("medicineStatus").innerHTML = "English, CONGRATULATIONS!";
+            }
+            if(times > 0){
+                if(times % 2 == 0){
+                    randomButton.style.backgroundColor = 'red';
+                } else {
+                    randomButton.style.backgroundColor = '#FFA07A';
+                }
+                setTimeout(function(){
+                    blink(times - 1);
+                }, 100);
+            } else {
+                randomButton.style.backgroundColor = 'red';
+                randomButton.click();
+            }
+        }
+
+        document.getElementById("medicineStatus").innerHTML = "系统随机选择语言： Selecting Language...: ";
+
+        // 获取按钮元素
+        var buttons = document.querySelectorAll('#buttonContainer button');
+
+        // 随机选择一个按钮
+        var randomIndex = Math.floor(Math.random() * (40 - 30 + 1)) + 30;
+        var randomButton = buttons[randomIndex % 2];
+        console.log("random button: " + randomIndex % 2);
+
+        changeButtonColor(randomIndex, randomIndex);
+
+        // 触发按钮点击事件
+        // randomButton.click();
 
         document.getElementById("en").addEventListener("click", function() {
             window.location.href = 'page1.html';
@@ -26,6 +76,18 @@
         document.getElementById("cn").addEventListener("click", function() {
             window.location.href = 'page1-cn.html';
         });
+
+        function sleep(time){
+            var timeStamp = new Date().getTime();
+            var endTime = timeStamp + time;
+            while(true){
+                if (new Date().getTime() > endTime){
+                    return;
+                } 
+            }
+        }
+
+
     </script>
 
 </body>
