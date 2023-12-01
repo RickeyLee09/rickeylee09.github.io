@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Check</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="full-width">
+        <h1 id="medicineStatus"></h1>
+    </div>
+
+    <div id="buttonContainer" class="full-width">
+        <button id="continue"> Continue </button>
+    </div>
+
+
+    <script>
+
+        document.getElementById("medicineStatus").innerHTML = "你是一名实验员, 有40名罹患某种疾病的患者是你的观察对象, 下面一一阐述了每个患者是否服用某种新型药物A的情况, \
+                                                                        请据此推测他是否会痊愈，你会被告知病人是否康复。每一位患者的病程和病情之间相互独立互不干涉。";
+
+        // 触发按钮点击事件
+        // randomButton.click();
+
+        // document.getElementById("continue").addEventListener("click", function() {
+        //     window.location.href = 'page1.html';
+        // });
+        document.getElementById("continue").addEventListener("click", function() {
+            window.location.href = 'page1-cn.html';
+        });
+
+    </script>
+
+</body>
+</html>

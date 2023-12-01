@@ -43,6 +43,23 @@ body {
     margin: 10px; /* add some margin around the buttons */
   }
 
+#randomBox {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    padding: 10px 40px;
+    float: left;
+    display: flex;
+    /* flex-direction: column; */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #FFA07A; */
+    color: #fff; /* button text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* button reaction */
+}
+
 button {
     font-size: 24px;
     padding: 10px 40px;

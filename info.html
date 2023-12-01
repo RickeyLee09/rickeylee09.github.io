@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Check</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="full-width">
+        <h1 id="medicineStatus"></h1>
+    </div>
+
+    <div id="buttonContainer" class="full-width">
+        <button id="continue"> Continue </button>
+    </div>
+
+
+    <script>
+
+        document.getElementById("medicineStatus").innerHTML = "You are a doctor and 40 patients suffering from a certain disease are in your hospital. \
+                                The following describes whether or not each patient has taken a new type of medicine. According to the describe, \
+                                predict  whether or not he will be cured(治愈), then you will be told whether or not the patient has overcome the \
+                                crisis(克服难关).";
+
+        // 触发按钮点击事件
+        // randomButton.click();
+
+        document.getElementById("continue").addEventListener("click", function() {
+            window.location.href = 'page1.html';
+        });
+        // document.getElementById("cn").addEventListener("click", function() {
+        //     window.location.href = 'page1-cn.html';
+        // });
+
+    </script>
+
+</body>
+</html>
